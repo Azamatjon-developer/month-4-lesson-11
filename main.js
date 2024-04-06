@@ -54,19 +54,19 @@
 let arr = [1,2,3,4,5] 
 function findMiddleNumber (param) {
 
-    let length = arr.length
+    if (arr.length % 2 == 0) {
+        const midle1= arr[arr.length /2 - 1]
+        const midle2 = arr[arr.length /2]
 
-
-    if (length % 2 == 0) {
-
-        const middleIndex = length / 2 
-        return (array[middleIndex - 1] + array[middleIndex]) / 2
-
-       
-
+        return (midle1 + midle2) /2 
+    }else{
+        const middleIndex = Math.floor(arr.length / 2) 
+        return arr[middleIndex]
     }
-
 }
 
-findMiddleNumber(arr)
+console.log(findMiddleNumber(arr));
+
+
+
 
